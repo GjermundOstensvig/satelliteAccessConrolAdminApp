@@ -17,6 +17,7 @@ namespace SatelliteAccessControlAdmin
             database = new DatabaseHandler();
         }
 
+        //Insert person button click event
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddPersonFeedbackTB.Text = "Inserting person into database";
@@ -24,6 +25,7 @@ namespace SatelliteAccessControlAdmin
             AddPersonFeedbackTB.Text = database.DbState;
         }
 
+        //Delete person button click event
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             DeletePersonFeedbackTB.Text = "Delete button was pressed.";
@@ -39,6 +41,7 @@ namespace SatelliteAccessControlAdmin
             }
         }
 
+        //Update person list for DeleteListView button click event
         private void UpdatePersonListBtn_Click(object sender, RoutedEventArgs e)
         {
             DataTable dtbl = database.selectPersons();
@@ -51,6 +54,7 @@ namespace SatelliteAccessControlAdmin
             DeleteListView.ItemsSource = persons;
         }
 
+        //Update person list for AuthorizeListView button click event
         private void UpdateAuthPersonListBtn_Click(object sender, RoutedEventArgs e)
         {
             DataTable dtbl = database.selectPersons();
@@ -63,6 +67,7 @@ namespace SatelliteAccessControlAdmin
             AuthorizeListView.ItemsSource = persons;
         }
 
+        //Update person list for AuthorizeForRoomListView button click event
         private void UpdateAuthRoomListBtn_Click(object sender, RoutedEventArgs e)
         {
             DataTable dtbl = database.selectRooms();
@@ -75,6 +80,7 @@ namespace SatelliteAccessControlAdmin
             AuthorizeForRoomListView.ItemsSource = rooms;
         }
 
+        //Insert authorization button click event
         private void GiveAccessBtn_Click(object sender, RoutedEventArgs e)
         {
             if (AuthorizeListView.SelectedIndex == -1 || AuthorizeForRoomListView.SelectedIndex == -1)
@@ -89,6 +95,7 @@ namespace SatelliteAccessControlAdmin
             }
         }
 
+        //Formats a DateTime into something understanduble for MySql
         private string FormatDateTime(DateTime dateTime)
         {
             string formatedDT = dateTime.Year.ToString() + "-" + dateTime.Month.ToString() + "-" + dateTime.Day.ToString() + " " +

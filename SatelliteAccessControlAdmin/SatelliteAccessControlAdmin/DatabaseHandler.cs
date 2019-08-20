@@ -6,17 +6,15 @@ namespace SatelliteAccessControlAdmin
 {
     public class DatabaseHandler
     {
-        MySqlConnection DbConnection = new MySqlConnection(@"Server=192.168.1.189; Database=SatelliteAccessControl; User Id=RfidUser; Password=satellite2019; ");
+        //NB! Change the connection string as needed.
+        MySqlConnection DbConnection = new MySqlConnection(@"Server=192.168.1.189; Database=SatelliteAccessControl; User Id=RfidUser; Password=satellite2019; ");   
         MySqlDataAdapter sqlDaAdapter; //Gets data from db and puts it in a DataTable Object
         DataSet dataSet = new DataSet();
         DataTable dataTable = new DataTable();
         public string DbState = "Without connection";
         public bool isConnected;
-        public DatabaseHandler()
-        {
 
-        }
-
+        //Inserts a Person into the database. Returns a boolean status value.
         public bool insertPerson(string fName, string lName, string eMail, string phoneNum)
         {
             string query = "INSERT INTO person(FirstName, LastName, `E-Mail`, PhoneNumber) " +
@@ -37,6 +35,7 @@ namespace SatelliteAccessControlAdmin
             return true;
         }
 
+        //Inserts an authorization into the database. Returns a boolean status value.
         public bool insertAuthorization(string personId, string RoomNumber, string StartDate, string EndDate)
         {
             string query = "INSERT INTO authorization(PersonId, RoomNumber, StartDate, EndDate)" +
@@ -57,6 +56,7 @@ namespace SatelliteAccessControlAdmin
             return true;
         }
 
+        //Selects all persons in database. Returns a datatable containing all persons.
         public DataTable selectPersons()
         {
             dataTable.Clear();
@@ -77,6 +77,7 @@ namespace SatelliteAccessControlAdmin
             return dataTable;
         }
 
+        //Selects all rooms in database. Returns a datatable containing all rooms.
         public DataTable selectRooms()
         {
             dataTable.Clear();
@@ -97,6 +98,7 @@ namespace SatelliteAccessControlAdmin
             return dataTable;
         }
 
+        //Deletes a person in database using a peronId.
         public void deletePerson(string personId)
         {
             string query = "DELETE FROM person WHERE PersonId = " + personId + ";";

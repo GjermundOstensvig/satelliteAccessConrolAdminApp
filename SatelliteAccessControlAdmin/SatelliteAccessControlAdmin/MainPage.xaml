@@ -10,6 +10,8 @@
 
     <Grid>
         <Pivot Title="Admin">
+
+            <!--  Add tab  -->
             <PivotItem Padding="10" Header="Add">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -107,6 +109,8 @@
                     </Grid>
                 </Grid>
             </PivotItem>
+
+            <!--  Give Access tab  -->
             <PivotItem Padding="10" Header="Give Access">
                 <Grid
                     Grid.Column="1"
@@ -177,13 +181,12 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <StackPanel Grid.Row="3" Orientation="Horizontal">
-                        <Button
-                            Name="UpdateAuthPersonListBtn"
-                            Margin="10"
-                            Click="UpdateAuthPersonListBtn_Click"
-                            Content="Update list" />
-                    </StackPanel>
+                    <Button
+                        Name="UpdateAuthPersonListBtn"
+                        Grid.Row="3"
+                        Margin="10"
+                        Click="UpdateAuthPersonListBtn_Click"
+                        Content="Update list" />
                     <StackPanel
                         Grid.Row="3"
                         Grid.Column="1"
@@ -218,9 +221,8 @@
 
                 </Grid>
             </PivotItem>
-            <PivotItem Padding="10" Header="Edit">
-                <Grid />
-            </PivotItem>
+
+            <!--  Delete tab  -->
             <PivotItem Padding="10" Header="Delete">
                 <Grid>
                     <Grid.ColumnDefinitions>

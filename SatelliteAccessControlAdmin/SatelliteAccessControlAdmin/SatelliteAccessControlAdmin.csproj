@@ -161,6 +161,11 @@
       <Version>8.0.17</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.ObjectModel">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

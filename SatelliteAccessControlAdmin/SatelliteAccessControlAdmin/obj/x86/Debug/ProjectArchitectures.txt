@@ -1,1 +1,0 @@
-C:\Users\Gjermund\Desktop\Jobb for HIOF\RFID Lab\Visual Studio Prosjekter\SatelliteAccessControlAdmin\SatelliteAccessControlAdmin\SatelliteAccessControlAdmin.csproj;x86

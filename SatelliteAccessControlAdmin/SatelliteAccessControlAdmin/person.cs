@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SatelliteAccessControlAdmin
+﻿namespace SatelliteAccessControlAdmin
 {
+    //The person class is used to make a Collection of person objects that we can use as a source for ListView
     public class person
     {
         public person(string PersonId, string FirstName, string LastName, string eMail, string PhoneNumber)

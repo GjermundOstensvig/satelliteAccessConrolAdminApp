@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SatelliteAccessControlAdmin
+﻿namespace SatelliteAccessControlAdmin
 {
+    //The room class is used to make a Collection of room objects that we can use as a source for ListView
     public class room
     {
         public room(string RoomNumber, string Floor)
